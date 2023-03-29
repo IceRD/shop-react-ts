@@ -2,10 +2,16 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-    mode: 'jit',
-    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+    content: {
+        relative: true,
+        files: ['./index.html', './src/**/*.{js,ts,jsx,tsx,scss}'],
+    },
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['Roboto'],
+            },
+
             colors: {
                 primary: {
                     light: '#a5b4fc',
@@ -20,8 +26,9 @@ module.exports = {
         require('@tailwindcss/forms'),
         plugin(function ({ addBase, theme }) {
             addBase({
-                h1: { fontSize: theme('fontSize.3xl') },
-                h2: { fontSize: theme('fontSize.2xl') },
+                html: { fontSize: '14px', color: '#3d3d3d' },
+                h1: { fontSize: theme('fontSize.3xl'), fontWeight: 500 },
+                h2: { fontSize: theme('fontSize.2xl'), fontWeight: 500 },
                 h3: { fontSize: theme('fontSize.xl') },
                 h4: { fontSize: theme('fontSize.lg') },
                 h5: { fontSize: theme('fontSize.base') },

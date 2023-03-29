@@ -1,0 +1,26 @@
+.footer {
+    @apply bg-[#45494A] 
+    text-[#909090];
+}
+
+.footer_top {
+    @apply lg:container 
+    lg:mx-auto 
+    text-base 
+    py-3 
+    px-6;
+}
+
+.footer_bottom {
+    @apply lg:container 
+    lg:mx-auto 
+    py-3 
+    px-6 
+    border-t 
+    border-[#595959];
+
+    p {
+        @apply text-sm 
+        text-center;
+    }
+}

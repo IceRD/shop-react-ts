@@ -1,3 +1,12 @@
 .wrapper {
-    @apply flex justify-center items-center h-screen;
+    @apply flex 
+    flex-col 
+    min-h-screen;
+}
+
+.main {
+    @apply grow 
+    lg:container 
+    lg:mx-auto 
+    px-6;
 }
